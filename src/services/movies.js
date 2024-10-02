@@ -6,9 +6,9 @@ export const fetchMovie = async (id) => {
     return result.data
 }
 
-export const fetchMovies = async () => {
-    const result = await axios.get(movieListEndpoint())
-    return result.data.results
+export const fetchMovies = async (page) => {
+    const result = await axios.get(movieListEndpoint(page))
+    return result.data
 }
 export const searchMovie=async(query)=>{
     const result=await axios.get(searchMoviesEndpoint(query))
